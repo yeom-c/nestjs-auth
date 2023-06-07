@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { validationSchema } from './env/validation.schema';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './database/typeorm.cofing';
+import { AccountModule } from './api/account/account.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { typeOrmConfig } from './database/typeorm.cofing';
       validationSchema,
     }),
     TypeOrmModule.forRootAsync(typeOrmConfig),
+    AccountModule,
   ],
   controllers: [],
   providers: [],
