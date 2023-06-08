@@ -20,7 +20,7 @@ export class Account {
   @Column()
   password: string;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'mediumtext' })
   refreshToken: string;
 
   @CreateDateColumn()
