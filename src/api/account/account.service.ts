@@ -21,4 +21,18 @@ export class AccountService {
 
     return account;
   }
+
+  async findAllWithQuery(
+    filter: string,
+    order: string,
+    page: number,
+    limit: number,
+  ) {
+    const [accounts, total] = await this.accountRepository.findAndCount({
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return { accounts, total };
+  }
 }
