@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { RegisterAccountDto } from './dto/register-account.dto';
-import { AccountRepository } from './account.repository';
+import { AccountRepository } from '../../repository/account.repository';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()

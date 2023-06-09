@@ -9,8 +9,7 @@ import {
 } from '@nestjs/common';
 import { AccountService } from './account.service';
 import { RegisterAccountDto } from './dto/register-account.dto';
-import { Account } from './entities/account.entity';
-import { Min } from 'class-validator';
+import { Account } from 'src/repository/entities/account.entity';
 
 @Controller('account')
 export class AccountController {
