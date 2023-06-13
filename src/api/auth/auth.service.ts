@@ -45,7 +45,7 @@ export class AuthService {
         'JWT_ACCESS_TOKEN_EXPIRATION_TIME',
       )}m`,
     });
-    const jwtRefreshToken = this.jwtService.sign(jwtPayload, {
+    const jwtRefreshToken = this.jwtService.sign(null, {
       secret: this.configService.get('JWT_REFRESH_TOKEN_SECRET'),
       expiresIn: `${this.configService.get(
         'JWT_REFRESH_TOKEN_EXPIRATION_TIME',
